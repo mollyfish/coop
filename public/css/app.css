@@ -39,6 +39,9 @@ a {
 a:hover {
   text-decoration: underline;
 }
+strong {
+  font-weight: bolder;
+}
 footer {
   clear: both;
   background-color: rgba(0, 204, 126, .3);
