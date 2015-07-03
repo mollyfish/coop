@@ -1,0 +1,24 @@
+h2 {
+  letter-spacing: .1em;
+  margin: 10px 0 0 45px;
+  clear: left;
+}
+ul#recent-list, ul#suggest-list {
+  margin: 40px 0 40px 45px;
+  float: left;
+}
+ul#recent-list li, ul#suggest-list li {
+  float: left;
+  margin: 0 30px 0 0;
+  height: 150px;
+  width: 150px;
+  border-radius: 15px;
+  border: 1px solid #ddd;
+}
+ul#recent-list li img, ul#suggest-list li img {
+  border-radius: 15px;
+}
+/*ul#suggest-list {
+  margin: 20px 0 20px 45px;
+  float: left;
+}*/

@@ -3,13 +3,15 @@
 <head>
   <meta charset="UTF-8">
 <meta name="keywords" content="art, sale, artist, coop, co-op, cooperative, craft, crafts, arts, painting, paintings, prints, printmaking, printmaker, jewelry, cards, stationery, stationary, greeting, knitting, knits, handknits, hand knits, key fobs, key chains, purses, hand sewn, hand made, hand crafted"/>
-  <title>Art Co-op :: Home</title>
+  <title>AAC :: Home</title>
 
 <!-- CSS
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 <link type="text/css" href="css/reset.css" rel="stylesheet"/>
 <link type="text/css" href="css/app.css" rel="stylesheet"/>
+<link type="text/css" href="css/header.css" rel="stylesheet"/>
 <link type="text/css" href="css/carousel.css" rel="stylesheet"/>
+<link type="text/css" href="css/recents.css" rel="stylesheet"/>
 
 
 <!-- JAVASCRIPT
@@ -31,26 +33,117 @@
     <p id="register"><a href="#">Register</a></p>
     <p id="cart"><a href="#">Cart</a></p>
   </header>
-    <div id="carousel">
-        
-        <div class="caro-item"></div>
-        <div class="caro-item diva" id="caro-1"><h3>Oystercatchers</h3><img src="../../Salish/public/images/birdwatching.jpg"></div>
-        <div class="caro-item backup" id="caro-2"><h3>Farmers Markets</h3><img src="../../Salish/public/images/farmersmarkets.jpg"></div>
-        <div class="caro-item backup" id="caro-3"><h3>Orcas</h3><img src="../../Salish/public/images/orcas.jpg"></div>
-        <div class="caro-item backup" id="caro-4"><h3>Sunsets</h3><img src="../../Salish/public/images/sunsets.jpg"></div>
-        <div class="caro-item backup" id="caro-5"><h3>Tidepools</h3><img src="../../Salish/public/images/tidepools.jpg"></div>
-        <div class="caro-item backup" id="caro-6"><h3>Harbor Seals</h3><img src="../../Salish/public/images/marinemammals.jpg"></div>
-          <div id="pos-wrapper">
-            <div class="pos diva" id="pos1"></div>
-            <div class="pos" id="pos2"></div>
-            <div class="pos" id="pos3"></div>
-            <div class="pos" id="pos4"></div>
-            <div class="pos" id="pos5"></div>
-            <div class="pos" id="pos6"></div>
-          </div>
-        <button id="caro-left">«</button>
-        <button id="caro-right">»</button>
-      </div>
+  <section id="carousel"> 
+    <div class="caro-item"></div>
+    <div class="caro-item diva" id="caro-1">
+      <h3 id="caro-1-link" class="caro-link diva"><a href="#">Modern Quilts</a></h3>
+      <img id="caro-1-image" src="images/fabric.png" alt="bolts of patterned fabric in shades of pink, yellow and grey">
+    </div>
+    <div class="caro-item backup" id="caro-2">
+      <h3 id="caro-2-link" class="caro-link backup"><a href="#">Handcrafted Jewelry</a></h3>
+      <img id="caro-1-image" src="images/jasper.png" alt="earth-tone yellow and green round jasper beads">
+    </div>
+    <div class="caro-item backup" id="caro-3">
+      <h3 id="caro-3-link" class="caro-link backup"><a href="#">Original Paintings</a></h3>
+      <img id="caro-1-image" src="images/paints.png" alt="messy tubes of oil paints in a wooden drawer">
+    </div>
+    <div class="caro-item backup" id="caro-4">
+      <h3 id="caro-4-link" class="caro-link backup"><a href="#">Handmade Paper</a></h3>
+      <img id="caro-1-image" src="images/paper.png" alt="blue and gold marbled paper">
+    </div>
+    <div class="caro-item backup" id="caro-5">
+      <h3 id="caro-5-link" class="caro-link backup"><a href="#">Handknits & Original Patterns</a></h3>
+      <img id="caro-1-image" src="images/yarn.png" alt="skeins of yarn in assorted bright colors">
+    </div>
+    <div class="caro-item backup" id="caro-6">
+      <h3 id="caro-6-link" class="caro-link backup"><a href="#">Hand Sewn Goods</a></h3>
+      <img id="caro-1-image" src="images/yukata.png" alt="rolls of patterned indigo and white Japanese fabrics">
+    </div>
+    <div id="pos-wrapper">
+      <div class="pos diva" id="pos1"></div>
+      <div class="pos" id="pos2"></div>
+      <div class="pos" id="pos3"></div>
+      <div class="pos" id="pos4"></div>
+      <div class="pos" id="pos5"></div>
+      <div class="pos" id="pos6"></div>
+    </div>
+    <button id="caro-left">«</button>
+    <button id="caro-right">»</button>
+  </section>
+  <section id="recents">
+    <h2>Recent Items</h2>
+      <ul id="recent-list">
+        <li id="recent1">
+          <a href="#">
+            <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTS6PBsRY3y-UpvSNUeO3j1xD8LcvYbrc1sRfbr8R8Do66RWXirDzgtfw" height="150" width="150" alt="">
+          </a>
+        </li>
+        <li id="recent2">
+          <a href="#">
+            <img src="https://img0.etsystatic.com/001/0/5235296/il_fullxfull.387835608_iwcf.jpg" height="150" width="150" alt="">
+          </a>
+        </li>
+        <li id="recent3">
+          <a href="#">
+            <img src="http://oneshabbychick.typepad.com/.a/6a00e3981dad5f88330148c7ba0b63970c-pi" height="150" width="150" alt="">
+          </a>
+        </li>
+        <li id="recent4">
+          <a href="#">
+            <img src="https://s-media-cache-ak0.pinimg.com/736x/81/55/27/8155274e910dfaa602021e8afd5d5bf5.jpg" height="150" width="150" alt="">
+          </a>
+        </li>
+        <li id="recent5">
+          <a href="#">
+            <img src="https://img1.etsystatic.com/000/0/6363038/il_fullxfull.256386333.jpg" height="150" width="150" alt="">
+          </a>
+        </li>
+        <li id="recent6">
+          <a href="#">
+            <img src="https://s-media-cache-ak0.pinimg.com/236x/1f/41/65/1f416588553ef4af6719832fd6f1064c.jpg" height="150" width="150" alt="">
+          </a>
+        </li>
+      </ul>
+  </section>
+  <section id="suggestions">
+    <h2>Suggested Items</h2>
+      <ul id="suggest-list">
+        <li id="suggest1">
+          <a href="#">
+            <img src="https://s-media-cache-ak0.pinimg.com/736x/81/55/27/8155274e910dfaa602021e8afd5d5bf5.jpg" height="150" width="150" alt="">
+          </a>
+        </li>
+        <li id="suggest2">
+          <a href="#">
+            <img src="https://s-media-cache-ak0.pinimg.com/236x/1f/41/65/1f416588553ef4af6719832fd6f1064c.jpg" height="150" width="150" alt="">
+          </a>
+        </li>
+        <li id="suggest3">
+          <a href="#">
+            <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTS6PBsRY3y-UpvSNUeO3j1xD8LcvYbrc1sRfbr8R8Do66RWXirDzgtfw" height="150" width="150" alt="">
+          </a>
+        </li>
+        <li id="suggest4">
+          <a href="#">
+            <img src="https://img1.etsystatic.com/000/0/6363038/il_fullxfull.256386333.jpg" height="150" width="150" alt="">
+          </a>
+        </li>
+        <li id="suggest5">
+          <a href="#">
+            <img src="http://oneshabbychick.typepad.com/.a/6a00e3981dad5f88330148c7ba0b63970c-pi" height="150" width="150" alt="">
+          </a>
+        </li>
+        <li id="suggest6">
+          <a href="#">
+            <img src="https://img0.etsystatic.com/001/0/5235296/il_fullxfull.387835608_iwcf.jpg" height="150" width="150" alt="">
+          </a>
+        </li>
+      </ul>
+  </section>
+  <footer>
+    <p class="emphasis"><a href="#">About</a> | <a href="#">Contact</a> | <a href="#">FAQ</a></p>
+    <p>Copyright Molly Kent 2015 &copy; All Rights Reserved</p>
+  </footer>
 </body>
 </html>
 

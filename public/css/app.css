@@ -1,73 +1,19 @@
+/***********************************
+COLORS:
+rgba(26, 255, 187, 1);
+rgba(0, 127, 79, 1);
+rgba(0, 255, 158, 1);
+rgba(38, 127, 94, 1);
+rgba(0, 204, 126, 1);
+***********************************/
 body {
   font-size: 1em;
   font-family: Tahoma, Helvetica, sans-serif;
   letter-spacing: .05em;
 }
-/***********************************
-HEADER STYLES
-***********************************/
-header {
-  height: 40px;
-  padding: 10px;
-  background-color: #efefef;
-  border-bottom: 13px solid rgba(15, 137, 255, 1);
-  margin-bottom: 5px;
-}
-header p, header h1, #browse, #login {
-  display: inline;
-  float: left;
-}
-header h1 {
-  font-size: 250%;
-  letter-spacing: .1em;
-}
-#search {
-  width: 170px;
-  float: left;
-  padding: 6px;
-  margin-top: 4px;
-  border: 1px solid #aaa;
-  border-radius: 5px;
-  background-color: #fff;
-}
-#search input {
-  background-color: #efefef;
-}
-#search button {
-  background-color: #efefef;
-  border: 1px solid #aaa;
-  border-radius: 4px;
-}
-#browse, #login {
-  font-size: 100%;
-  margin-top: 4px;
-  height: 33px;
-  border: 1px solid #aaa;
-  border-radius: 5px;
-  background-color: #fff;
-  padding-left: 8px;
-  cursor: pointer;
-}
-#browse {
-  width: 95px;
-  text-align: left;
-  background-image: url(../images/dropdown.png);
-  background-position: right;
-  background-repeat: no-repeat;
-  margin-left: 10px;
-}
-#register, #cart {
-  margin-top: 12px;
-  margin-left: 10px;
-}
-#search, #login, #cart {
-  margin-left: 4%; /*Good until window is 960px wide*/
-}
-/***********************************
-GENERAL STYLES
-***********************************/
 h1 {
   font-size: 300%;
+  font-weight: bolder;
 }
 h2 {
   font-size: 250%;
@@ -85,4 +31,24 @@ h6 {
   font-size: 110%;
 }
 p {
+}
+a {
+  color: #000;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+footer {
+  clear: both;
+  background-color: rgba(0, 204, 126, .3);
+}
+footer p {
+  padding: 10px 0;
+  text-align: center;
+  font-size: 30%;
+}
+p.emphasis {
+  font-size: 120%;
+  padding: 20px 0;
 }
