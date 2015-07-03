@@ -18,6 +18,7 @@
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 <script src="js/deps/jquery.js"></script>
 <script src="js/app.js"></script>
+<script src="js/dropdown.js"></script>
 </head>
 <!-- CONTENT
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -28,7 +29,13 @@
       <input type="text" id="searchbox" placeholder="Search">
       <button type="submit">Go</button>
     </form>
-    <button id="browse">Browse</button>
+    <div id="browse-wrapper">
+      <button id="browse">Browse</button>
+      <ul id="browse-by" class="hide-me">
+        <a href="#"><li>Artists</li></a>
+        <a href="#"><li>Categories</li></a>
+      </ul>
+    </div>
     <button id="login">Log In</button>
     <p id="register"><a href="#">Register</a></p>
     <p id="cart"><a href="#">Cart</a></p>
