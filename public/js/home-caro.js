@@ -1,196 +1,143 @@
 'use strict';
 $(function() {
   var toPop;
-
   var initialCaro = Math.floor((Math.random() * 6) + 1);
-  console.log(initialCaro);
+
+  function caroStart(num) {
+    $('#caro-' + num).removeClass('backup').addClass('diva');
+    $('#caro-' + num + '-link').removeClass('backup').addClass('diva');
+    $('#pos' + num).addClass('diva');
+  };
+
+  function rotateRight(num) {
+    var next = num + 1;
+    if (next < 7) {
+      $('#caro-' + next).removeClass('backup').addClass('diva');
+      $('#caro-' + num).removeClass('diva').addClass('backup');
+      $('#caro-' + next + '-link').removeClass('backup').addClass('diva');
+      $('#caro-' + num + '-link').removeClass('diva').addClass('backup');
+      $('#pos' + num).removeClass('diva');
+      $('#pos' + next).addClass('diva');
+    } else {
+      next = 1;
+      $('#caro-' + next).removeClass('backup').addClass('diva');
+      $('#caro-' + num).removeClass('diva').addClass('backup');
+      $('#caro-' + next + '-link').removeClass('backup').addClass('diva');
+      $('#caro-' + num + '-link').removeClass('diva').addClass('backup');
+      $('#pos' + num).removeClass('diva');
+      $('#pos' + next).addClass('diva');
+    }
+  };
+
+  function rotateLeft(num) {
+    var next = num - 1;
+    if (next > 0) {
+      $('#caro-' + next).removeClass('backup').addClass('diva');
+      $('#caro-' + num).removeClass('diva').addClass('backup');
+      $('#caro-' + next + '-link').removeClass('backup').addClass('diva');
+      $('#caro-' + num + '-link').removeClass('diva').addClass('backup');
+      $('#pos' + num).removeClass('diva');
+      $('#pos' + next).addClass('diva');
+    } else {
+      next = 6;
+      $('#caro-' + next).removeClass('backup').addClass('diva');
+      $('#caro-' + num).removeClass('diva').addClass('backup');
+      $('#caro-' + next + '-link').removeClass('backup').addClass('diva');
+      $('#caro-' + num + '-link').removeClass('diva').addClass('backup');
+      $('#pos' + num).removeClass('diva');
+      $('#pos' + next).addClass('diva');
+    }
+  };
+
+  function posChange(num) {
+    $('.caro-item.diva').addClass('backup').removeClass('diva');
+    $('.pos.diva').removeClass('diva');
+    $('.caro-link.diva').removeClass('diva');
+    $('#caro-' + num + '-link').removeClass('backup').addClass('diva');
+    $('div#pos' + num).addClass('diva');
+    $('#caro-' + num).removeClass('backup').addClass('diva');
+  };
+
   if (initialCaro === 1) {
-    $('#caro-1').removeClass('backup').addClass('diva');
-    $('#caro-1-link').removeClass('backup').addClass('diva');
-    $('#pos1').addClass('diva');
-    console.log('one');
-  }
+    caroStart(1);
+  };
   if (initialCaro === 2) {
-    $('#caro-2').removeClass('backup').addClass('diva');
-    $('#caro-2-link').removeClass('backup').addClass('diva');
-    $('#pos2').addClass('diva');
-    console.log('two');
-  }
+    caroStart(2);
+  };
   if (initialCaro === 3) {
-    $('#caro-3').removeClass('backup').addClass('diva');
-    $('#caro-3-link').removeClass('backup').addClass('diva');
-    $('#pos3').addClass('diva');
-    console.log('three');
-  }
+    caroStart(3);
+  };
   if (initialCaro === 4) {
-    $('#caro-4').removeClass('backup').addClass('diva');
-    $('#caro-4-link').removeClass('backup').addClass('diva');
-    $('#pos4').addClass('diva');
-    console.log('four');
-  }
+    caroStart(4);
+  };
   if (initialCaro === 5) {
-    $('#caro-5').removeClass('backup').addClass('diva');
-    $('#caro-5-link').removeClass('backup').addClass('diva');
-    $('#pos5').addClass('diva');
-    console.log('five');
-  }
+    caroStart(5);
+  };
   if (initialCaro === 6) {
-    $('#caro-6').removeClass('backup').addClass('diva');
-    $('#caro-6-link').removeClass('backup').addClass('diva');
-    $('#pos6').addClass('diva');
-    console.log('six');
-  }
+    caroStart(6);
+  };
 
   $('#carousel').on('click', 'button#caro-right', function() {
     toPop = $(this).siblings('.diva');
     if ($(toPop).attr('id') === 'caro-1') {
-      $('#caro-2').removeClass('backup').addClass('diva');
-      $('#caro-1').removeClass('diva').addClass('backup');
-      $('#caro-2-link').removeClass('backup').addClass('diva');
-      $('#caro-1-link').removeClass('diva').addClass('backup');
-      $('#pos1').removeClass('diva');
-      $('#pos2').addClass('diva');
+      rotateRight(1);
     }
     if ($(toPop).attr('id') === 'caro-2') {
-      $('#caro-3').removeClass('backup').addClass('diva');
-      $('#caro-2').removeClass('diva').addClass('backup');
-      $('#caro-3-link').removeClass('backup').addClass('diva');
-      $('#caro-2-link').removeClass('diva').addClass('backup');
-      $('#pos2').removeClass('diva');
-      $('#pos3').addClass('diva');
+      rotateRight(2);
     }
     if ($(toPop).attr('id') === 'caro-3') {
-      $('#caro-4').removeClass('backup').addClass('diva');
-      $('#caro-3').removeClass('diva').addClass('backup');
-      $('#caro-4-link').removeClass('backup').addClass('diva');
-      $('#caro-3-link').removeClass('diva').addClass('backup');
-      $('#pos3').removeClass('diva');
-      $('#pos4').addClass('diva');
+      rotateRight(3);
     }
     if ($(toPop).attr('id') === 'caro-4') {
-      $('#caro-5').removeClass('backup').addClass('diva');
-      $('#caro-4').removeClass('diva').addClass('backup');
-      $('#caro-5-link').removeClass('backup').addClass('diva');
-      $('#caro-4-link').removeClass('diva').addClass('backup');
-      $('#pos4').removeClass('diva');
-      $('#pos5').addClass('diva');
+      rotateRight(4);
     }
     if ($(toPop).attr('id') === 'caro-5') {
-      $('#caro-6').removeClass('backup').addClass('diva');
-      $('#caro-5').removeClass('diva').addClass('backup');
-      $('#caro-6-link').removeClass('backup').addClass('diva');
-      $('#caro-5-link').removeClass('diva').addClass('backup');
-      $('#pos5').removeClass('diva');
-      $('#pos6').addClass('diva');
+      rotateRight(5);
     } 
     if ($(toPop).attr('id') === 'caro-6') {
-      $('#caro-1').removeClass('backup').addClass('diva');
-      $('#caro-6').removeClass('diva').addClass('backup');
-      $('#caro-1-link').removeClass('backup').addClass('diva');
-      $('#caro-6-link').removeClass('diva').addClass('backup');
-      $('#pos6').removeClass('diva');
-      $('#pos1').addClass('diva');
+      rotateRight(6);
     }
   });
 
   $('#carousel').on('click', 'button#caro-left', function() {
     toPop = $(this).siblings('.diva');
     if ($(toPop).attr('id') === 'caro-6') {
-      $('#caro-5').removeClass('backup').addClass('diva');
-      $('#caro-6').removeClass('diva').addClass('backup');
-      $('#caro-5-link').removeClass('backup').addClass('diva');
-      $('#caro-6-link').removeClass('diva').addClass('backup');
-      $('#pos6').removeClass('diva');
-      $('#pos5').addClass('diva');
+      rotateLeft(6);
     }
     if ($(toPop).attr('id') === 'caro-5') {
-      $('#caro-4').removeClass('backup').addClass('diva');
-      $('#caro-5').removeClass('diva').addClass('backup');
-      $('#caro-4-link').removeClass('backup').addClass('diva');
-      $('#caro-5-link').removeClass('diva').addClass('backup');
-      $('#pos5').removeClass('diva');
-      $('#pos4').addClass('diva');
+      rotateLeft(5);
     }
     if ($(toPop).attr('id') === 'caro-4') {
-      $('#caro-3').removeClass('backup').addClass('diva');
-      $('#caro-4').removeClass('diva').addClass('backup');
-      $('#caro-3-link').removeClass('backup').addClass('diva');
-      $('#caro-4-link').removeClass('diva').addClass('backup');
-      $('#pos4').removeClass('diva');
-      $('#pos3').addClass('diva');
+      rotateLeft(4);
     }
     if ($(toPop).attr('id') === 'caro-3') {
-      $('#caro-2').removeClass('backup').addClass('diva');
-      $('#caro-3').removeClass('diva').addClass('backup');
-      $('#caro-2-link').removeClass('backup').addClass('diva');
-      $('#caro-3-link').removeClass('diva').addClass('backup');
-      $('#pos3').removeClass('diva');
-      $('#pos2').addClass('diva');
+      rotateLeft(3);
     }
     if ($(toPop).attr('id') === 'caro-2') {
-      $('#caro-1').removeClass('backup').addClass('diva');
-      $('#caro-2').removeClass('diva').addClass('backup');
-      $('#caro-1-link').removeClass('backup').addClass('diva');
-      $('#caro-2-link').removeClass('diva').addClass('backup');
-      $('#pos2').removeClass('diva');
-      $('#pos1').addClass('diva');
+      rotateLeft(2);
     } 
     if ($(toPop).attr('id') === 'caro-1') {
-      $('#caro-6').removeClass('backup').addClass('diva');
-      $('#caro-1').removeClass('diva').addClass('backup');
-      $('#caro-6-link').removeClass('backup').addClass('diva');
-      $('#caro-1-link').removeClass('diva').addClass('backup');
-      $('#pos1').removeClass('diva');
-      $('#pos6').addClass('diva');
+      rotateLeft(1);
     }
   });
 
   $('#carousel').on('click', 'div#pos1', function() {
-    $('.caro-item.diva').addClass('backup').removeClass('diva');
-    $('.pos.diva').removeClass('diva');
-    $('.caro-link.diva').removeClass('diva');
-    $('#caro-1-link').removeClass('backup').addClass('diva');
-    $(this).addClass('diva');
-    $('#caro-1').removeClass('backup').addClass('diva');
+    posChange(1);
   });
   $('#carousel').on('click', 'div#pos2', function() {
-    $('.caro-item.diva').addClass('backup').removeClass('diva');
-    $('.pos.diva').removeClass('diva');
-    $('.caro-link.diva').removeClass('diva');
-    $('#caro-2-link').removeClass('backup').addClass('diva');
-    $(this).addClass('diva');
-    $('#caro-2').removeClass('backup').addClass('diva');
+    posChange(2);
   });
   $('#carousel').on('click', 'div#pos3', function() {
-    $('.caro-item.diva').addClass('backup').removeClass('diva');
-    $('.pos.diva').removeClass('diva');
-    $('.caro-link.diva').removeClass('diva');
-    $('#caro-3-link').removeClass('backup').addClass('diva');
-    $(this).addClass('diva');
-    $('#caro-3').removeClass('backup').addClass('diva');
+    posChange(3);
   });
   $('#carousel').on('click', 'div#pos4', function() {
-    $('.caro-item.diva').addClass('backup').removeClass('diva');
-    $('.pos.diva').removeClass('diva');
-    $('.caro-link.diva').removeClass('diva');
-    $('#caro-4-link').removeClass('backup').addClass('diva');
-    $(this).addClass('diva');
-    $('#caro-4').removeClass('backup').addClass('diva');
+    posChange(4);
   });
   $('#carousel').on('click', 'div#pos5', function() {
-    $('.caro-item.diva').addClass('backup').removeClass('diva');
-    $('.pos.diva').removeClass('diva');
-    $('.caro-link.diva').removeClass('diva');
-    $('#caro-5-link').removeClass('backup').addClass('diva');
-    $(this).addClass('diva');
-    $('#caro-5').removeClass('backup').addClass('diva');
+    posChange(5);
   });
   $('#carousel').on('click', 'div#pos6', function() {
-    $('.caro-item.diva').addClass('backup').removeClass('diva');
-    $('.pos.diva').removeClass('diva');
-    $('.caro-link.diva').removeClass('diva');
-    $('#caro-6-link').removeClass('backup').addClass('diva');
-    $(this).addClass('diva');
-    $('#caro-6').removeClass('backup').addClass('diva');
+    posChange(6);
   });
+  
 });

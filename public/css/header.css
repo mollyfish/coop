@@ -30,27 +30,34 @@ header h1 {
   border: 1px solid #aaa;
   border-radius: 4px;
 }
-#browse, #login {
+#browse {
+  position: relative;
   font-size: 100%;
+  text-align: left;
   margin-top: 4px;
+  padding-left: 8px;
   height: 33px;
+  width: 105px;
   border: 1px solid #aaa;
   border-radius: 5px;
   background-color: #fff;
-  padding-left: 8px;
   cursor: pointer;
-}
-#browse {
-  width: 105px;
-  text-align: left;
   background-image: url(../images/dropdown.png);
   background-position: right;
   background-repeat: no-repeat;
-  /*margin-left: 10px;*/
-  position: relative;
 }
 #browse:focus {
   outline: 0;
+}
+#login {
+  font-size: 100%;
+  margin-top: 4px;
+  height: 24px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 7px 8px 0 8px;
+  cursor: pointer;
 }
 #register, #cart {
   margin-top: 12px;
@@ -63,7 +70,6 @@ header h1 {
   position: relative;
   display: inline;
   float: left;
-  /*background-color: red;*/
   margin-left: 10px;
 }
 #browse-by {
