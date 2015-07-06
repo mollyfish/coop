@@ -2,6 +2,45 @@
 $(function() {
   var toPop;
 
+  var initialCaro = Math.floor((Math.random() * 6) + 1);
+  console.log(initialCaro);
+  if (initialCaro === 1) {
+    $('#caro-1').removeClass('backup').addClass('diva');
+    $('#caro-1-link').removeClass('backup').addClass('diva');
+    $('#pos1').addClass('diva');
+    console.log('one');
+  }
+  if (initialCaro === 2) {
+    $('#caro-2').removeClass('backup').addClass('diva');
+    $('#caro-2-link').removeClass('backup').addClass('diva');
+    $('#pos2').addClass('diva');
+    console.log('two');
+  }
+  if (initialCaro === 3) {
+    $('#caro-3').removeClass('backup').addClass('diva');
+    $('#caro-3-link').removeClass('backup').addClass('diva');
+    $('#pos3').addClass('diva');
+    console.log('three');
+  }
+  if (initialCaro === 4) {
+    $('#caro-4').removeClass('backup').addClass('diva');
+    $('#caro-4-link').removeClass('backup').addClass('diva');
+    $('#pos4').addClass('diva');
+    console.log('four');
+  }
+  if (initialCaro === 5) {
+    $('#caro-5').removeClass('backup').addClass('diva');
+    $('#caro-5-link').removeClass('backup').addClass('diva');
+    $('#pos5').addClass('diva');
+    console.log('five');
+  }
+  if (initialCaro === 6) {
+    $('#caro-6').removeClass('backup').addClass('diva');
+    $('#caro-6-link').removeClass('backup').addClass('diva');
+    $('#pos6').addClass('diva');
+    console.log('six');
+  }
+
   $('#carousel').on('click', 'button#caro-right', function() {
     toPop = $(this).siblings('.diva');
     if ($(toPop).attr('id') === 'caro-1') {
