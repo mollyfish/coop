@@ -3,20 +3,21 @@
 <head>
   <meta charset="UTF-8">
 <meta name="keywords" content="art, sale, artist, coop, co-op, cooperative, craft, crafts, arts, painting, paintings, prints, printmaking, printmaker, jewelry, cards, stationery, stationary, greeting, knitting, knits, handknits, hand knits, key fobs, key chains, purses, hand sewn, hand made, hand crafted"/>
-  <title>AAC :: 404</title>
+  <title>AAC :: Register</title>
 
 <!-- CSS
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 <link type="text/css" href="css/reset.css" rel="stylesheet"/>
 <link type="text/css" href="css/app.css" rel="stylesheet"/>
 <link type="text/css" href="css/header.css" rel="stylesheet"/>
-<link type="text/css" href="css/404.css" rel="stylesheet"/>
+<link type="text/css" href="css/registration.css" rel="stylesheet"/>
 
 <!-- JAVASCRIPT
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 <script src="js/deps/jquery.js"></script>
 <script src="js/home-caro.js"></script>
 <script src="js/dropdown.js"></script>
+<script src="js/register.js"></script>
 </head>
 <!-- CONTENT
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -38,7 +39,23 @@
     <p id="register"><a href="register.html">Register</a></p>
     <p id="cart"><a href="cart.html">Cart</a></p>
   </header>
-  <h2>404: Page Not Found</h2>
+  <section>
+    <h2>Register</h2>
+    <form id="registration">
+      <fieldset>
+        <legend>Contact Information</legend>
+        <p><label for="first">First Name: <input type="text" name="first" id="first" placeholder="Jane"></label></p>
+        <p><label for="last">Last Name: <input type="text" name="last" id="last" placeholder="Smith"></label></p>
+        <p><label for="email">Email: <input type="text" name="email" id="email" placeholder="janesmith@email.com"></label></p>
+      </fieldset>
+      <fieldset>
+        <legend>Account Information</legend>
+        <p><label for="username">Username: <input type="text" name="username" id="username" placeholder="myusername"></label><br><span class="note">You may use your email address as your username.</span></p>
+        <p><label for="password">Password: <input type="text" name="password" id="password" placeholder="password"></label></p>
+      </fieldset>
+      <button type="submit" id="submit-registration">Submit</button>
+    </form>
+  </section>
   <footer>
     <p class="emphasis"><a href="about.html">About</a> | <a href="about.html#contact">Contact</a> | <a href="about.html#faq">FAQ</a></p>
     <p>Copyright Molly Kent 2015 &copy; All Rights Reserved</p>

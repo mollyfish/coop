@@ -25,11 +25,10 @@ div.caro-item img {
 .caro-item h3 {
   padding: 10px 15px;
   display: inline;
-  border-radius: 5px;
+  border-radius: 10px;
   letter-spacing: .1em;
   background-color: rgba(255, 255, 255, .5);
   font-size: 220%;
-  /*font-weight: bolder;*/
   letter-spacing: .2em;
   position: absolute;
   top: 30px;
@@ -49,12 +48,9 @@ h3.diva a, h3.backup a {
   text-decoration: none;
 }
 h3.diva a:visited, h3.backup a:visited {
-  /*color: #fff;*/
 }
 h3.diva a:hover, h3.backup a:hover {
-  /*text-decoration: underline;*/
   color: rgba(255, 255, 255, 1);
-  /*background-color: rgba(0, 0, 0, .5);*/
 }
 /*_____________________________
 Carousel Buttons 
@@ -63,10 +59,13 @@ Carousel Buttons
   width: 40px;
   height: 40px;
   position: absolute;
-  border: 0px solid #ccc;
-  border-radius: 18px;
+  border-radius: 20px;
   cursor: pointer;
-  line-height: .1em;
+  line-height: .01em;
+  background: none;
+  background-color: rgba(255, 255, 255, .3);
+  border: 1px solid #fff;
+  color: rgba(0, 0, 0, .5);
 }
 #carousel button:focus {
   outline: 0;
@@ -83,6 +82,16 @@ Carousel Buttons
   padding: 0;
   font-size: 400%;
 }
+span#left {
+  position: absolute;
+  left: 4px;
+  top: 14px;
+}
+span#right {
+  position: absolute;
+  right: 4px;
+  top: 14px;
+}
 /*_____________________________
 Carousel Position Dots 
 */
@@ -98,23 +107,15 @@ Carousel Position Dots
   width: 20px;
   border-radius: 10px;
   position: absolute;
+  border: 1px solid rgba(255, 255, 255, .5);
+  background-color: rgba(255, 255, 255, .2);
+  transition: background-color .5s;
 }
 #pos1:hover, #pos2:hover, #pos3:hover, #pos4:hover, #pos5:hover, #pos6:hover {
   cursor: pointer;
 }
-#pos1 { left: 0; }  #pos2 { left: 40px; } #pos3 { left: 80px; } #pos4 { left: 120px; } #pos5 { left: 160px; } #pos6 { left: 200px; }
-/*************************
-COLORS
-**************************/
-#carousel button {
-  border-color: none;
-  background: none;
-  color: rgba(0, 0, 0, .5);
-}
-#pos1, #pos2, #pos3, #pos4, #pos5, #pos6 {
-  background-color: rgba(0, 0, 0, .3);
-  transition: background-color .5s;
-}
 #pos1.diva, #pos2.diva, #pos3.diva, #pos4.diva, #pos5.diva, #pos6.diva {
   background-color: rgba(0, 0, 0, .8);
+  border: 1px solid rgba(255, 255, 255, .5);
 }
+#pos1 { left: 0; }  #pos2 { left: 40px; } #pos3 { left: 80px; } #pos4 { left: 120px; } #pos5 { left: 160px; } #pos6 { left: 200px; }

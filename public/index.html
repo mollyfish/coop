@@ -11,7 +11,7 @@
 <link type="text/css" href="css/app.css" rel="stylesheet"/>
 <link type="text/css" href="css/header.css" rel="stylesheet"/>
 <link type="text/css" href="css/home-caro.css" rel="stylesheet"/>
-<link type="text/css" href="css/recents.css" rel="stylesheet"/>
+<link type="text/css" href="css/photobar.css" rel="stylesheet"/>
 
 
 <!-- JAVASCRIPT
@@ -37,8 +37,8 @@
       </ul>
     </div>
     <p id="login"><a href="login.html">Log In</a></p>
-    <p id="register"><a href="#">Register</a></p>
-    <p id="cart"><a href="#">Cart</a></p>
+    <p id="register"><a href="register.html">Register</a></p>
+    <p id="cart"><a href="cart.html">Cart</a></p>
   </header>
   <section id="carousel"> 
     <div class="caro-item"></div>
@@ -74,10 +74,10 @@
       <div class="pos" id="pos5"></div>
       <div class="pos" id="pos6"></div>
     </div>
-    <button id="caro-left">«</button>
-    <button id="caro-right">»</button>
+    <button id="caro-left"><span id="left">«</span></button>
+    <button id="caro-right"><span id="right">»</span></button>
   </section>
-  <section id="recents">
+  <section id="recents" class="photo-bar">
     <h2>Recent Items</h2>
       <ul id="recent-list">
         <li id="recent1">
@@ -112,7 +112,7 @@
         </li>
       </ul>
   </section>
-  <section id="suggestions">
+  <section id="suggestions" class="photo-bar">
     <h2>Suggested Items</h2>
       <ul id="suggest-list">
         <li id="suggest1">
@@ -148,7 +148,7 @@
       </ul>
   </section>
   <footer>
-    <p class="emphasis"><a href="#">About</a> | <a href="#">Contact</a> | <a href="#">FAQ</a></p>
+    <p class="emphasis"><a href="about.html">About</a> | <a href="about.html#contact">Contact</a> | <a href="about.html#faq">FAQ</a></p>
     <p>Copyright Molly Kent 2015 &copy; All Rights Reserved</p>
   </footer>
 </body>

@@ -20,6 +20,9 @@ header h1 a:hover {
 }
 h2 {
   font-size: 250%;
+  letter-spacing: .1em;
+  margin: 10px 0 0 45px;
+  clear: left;
 }
 h3 {
   font-size: 180%;
@@ -29,11 +32,15 @@ h4 {
 }
 h5 {
   font-size: 120%;
+  margin: 10px 0 0 45px;
 }
 h6 {
   font-size: 110%;
 }
-p {
+section p {
+  margin: 15px 45px 15px 45px;
+  line-height: 1.25em;
+  letter-spacing: .05em;
 }
 a {
   color: #000;
@@ -41,6 +48,13 @@ a {
 }
 a:hover {
   text-decoration: underline;
+}
+section p a {
+  color: #000;
+  text-decoration: underline;
+}
+section p a:hover {
+  color: rgba(0, 204, 126, 1);
 }
 aside {
   width: 22%;
@@ -58,6 +72,26 @@ aside p {
 aside a {
   text-decoration: underline;
 }
+section form {
+  width: 40%;
+  margin: 20px auto 40px auto;
+  padding-bottom: 15px;
+  border: 1px solid rgba(0, 204, 126, 1);
+  border-radius: 15px;
+}
+section form button {
+  margin: 0 15px;
+}
+section form p {
+  margin: 15px;
+  line-height: 1.25em;
+  letter-spacing: .05em;
+}
+section form h5 {
+  margin: 15px;
+  line-height: 1.25em;
+  letter-spacing: .05em;
+}
 strong {
   font-weight: bolder;
 }
@@ -70,7 +104,10 @@ footer p {
   text-align: center;
   font-size: 30%;
 }
-p.emphasis {
+.emphasis {
   font-size: 120%;
   padding: 20px 0;
+}
+.note {
+  font-size: 60%;
 }

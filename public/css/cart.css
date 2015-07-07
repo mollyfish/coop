@@ -1,0 +1,40 @@
+table {
+  margin: 10px 45px;
+  padding: 10px;
+  border: 1px solid rgba(0, 204, 126, 1);
+  border-radius: 15px;
+  border-collapse: separate;
+  border-spacing: 2px;
+  width: 90%;
+}
+td, th {
+  border: 1px solid #ddd;
+  padding: 2px;
+}
+tr.headings {
+  font-weight: bolder;
+}
+th {
+  font-size: 120%;
+  text-align: left;
+}
+td {
+  text-align: right;
+}
+td.item-name {
+  text-align: left;
+}
+#grand-total {
+  font-weight: bolder;
+}
+#checkout {
+  float: right;
+  margin-right: 6.5%;
+  margin-bottom: 15px;
+  font-size: 130%;
+  border: 2px solid rgba(0, 204, 126, 1);
+  background-color: #eee;
+  border-radius: 8px;
+  padding: 8px 12px;
+}
+

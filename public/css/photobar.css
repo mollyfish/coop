@@ -1,0 +1,15 @@
+section.photo-bar ul {
+  margin: 40px 0 40px 45px;
+  float: left;
+}
+section.photo-bar ul li {
+  float: left;
+  margin: 0 30px 0 0;
+  height: 150px;
+  width: 150px;
+  border-radius: 15px;
+  border: 1px solid #ddd;
+}
+section.photo-bar ul li img {
+  border-radius: 15px;
+}

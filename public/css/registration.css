@@ -1,0 +1,13 @@
+section form {
+  width: 60%;
+  padding: 15px;
+  margin-left: 45px;
+}
+section form fieldset {
+  padding: 10px;
+  border: 1px solid #eee;
+  margin-bottom: 15px;
+}
+section form legend {
+  font-size: 120%;
+}

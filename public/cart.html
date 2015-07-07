@@ -3,20 +3,21 @@
 <head>
   <meta charset="UTF-8">
 <meta name="keywords" content="art, sale, artist, coop, co-op, cooperative, craft, crafts, arts, painting, paintings, prints, printmaking, printmaker, jewelry, cards, stationery, stationary, greeting, knitting, knits, handknits, hand knits, key fobs, key chains, purses, hand sewn, hand made, hand crafted"/>
-  <title>AAC :: 404</title>
+  <title>AAC :: Cart</title>
 
 <!-- CSS
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 <link type="text/css" href="css/reset.css" rel="stylesheet"/>
 <link type="text/css" href="css/app.css" rel="stylesheet"/>
 <link type="text/css" href="css/header.css" rel="stylesheet"/>
-<link type="text/css" href="css/404.css" rel="stylesheet"/>
+<link type="text/css" href="css/cart.css" rel="stylesheet"/>
 
 <!-- JAVASCRIPT
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 <script src="js/deps/jquery.js"></script>
 <script src="js/home-caro.js"></script>
 <script src="js/dropdown.js"></script>
+<script src="js/cart.js"></script>
 </head>
 <!-- CONTENT
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -38,7 +39,60 @@
     <p id="register"><a href="register.html">Register</a></p>
     <p id="cart"><a href="cart.html">Cart</a></p>
   </header>
-  <h2>404: Page Not Found</h2>
+  <section id="shopping-cart">
+    <h2>Shopping Cart</h2>
+    <table id="cart-contents">
+      <tr class="headings">
+        <th>Item</th>
+        <td>Unit Price</td>
+        <td>Quantity</td>
+        <td>Item Total</td>
+      </tr>
+      <tr class="item-list" id="">
+        <td class="item-info item-name">iPad Case - typewriter design</td>
+        <td class="item-info item-price">25.00</td>
+        <td class="item-info item-quant">2</td>
+        <td class="item-info item-total"></td>
+      </tr>
+      <tr class="item-list" id="">
+        <td class="item-info item-name">Watercolor - "Seedlings"</td>
+        <td class="item-info item-price">249.99</td>
+        <td class="item-info item-quant">1</td>
+        <td class="item-info item-total"></td>
+      </tr>
+      <tr class="item-list" id="">
+        <td class="item-info item-name">Keyfob - bicycle design</td>
+        <td class="item-info item-price">5.00</td>
+        <td class="item-info item-quant">6</td>
+        <td class="item-info item-total"></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td><strong>Total:</strong></td>
+        <td id="grand-total-no-tax"></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td><strong>Tax:</strong></td>
+        <td id="sales-tax"></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td><strong>Shipping:</strong></td>
+        <td id="shipping"></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td><strong>Order Total:</strong></td>
+        <td id="grand-total"></td>
+      </tr>
+    </table>
+    <button id="checkout">Checkout</button>
+  </section>
   <footer>
     <p class="emphasis"><a href="about.html">About</a> | <a href="about.html#contact">Contact</a> | <a href="about.html#faq">FAQ</a></p>
     <p>Copyright Molly Kent 2015 &copy; All Rights Reserved</p>
